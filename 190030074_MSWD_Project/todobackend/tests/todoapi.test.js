@@ -18,17 +18,17 @@ beforeEach(async () => {
 
 describe('test for getting data from db',() => {
 
- test('there are n blogs', async () => {
+ test('there are n todos', async () => {
      const response = await api.get('/api/todolist')
      expect(response.body).toHaveLength(helper.initialtodo.length)
  })
- test('the first blog is on react patterns', async () => {
+ test('the first todo is on react patterns', async () => {
      const response = await api.get('/api/todolist')   
      expect(response.body[0].content).toBe("React patterns",)
  })
 })
 
-test('The unique identifier property of the blog posts is by default _id', async () => {
+test('The unique identifier property of the todo posts is by default _id', async () => {
     const blogs = await todomodel.find({})
     expect(blogs[0].id).toBeDefined()
   })

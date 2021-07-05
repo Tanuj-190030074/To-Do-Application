@@ -3,7 +3,7 @@ import { useDispatch} from 'react-redux'
 import { useHistory } from 'react-router-dom'
 import { setNotification } from '../reducers/notificationReducer'
 import { Table, Form, Button } from 'react-bootstrap'
-import registerService from '../services/register'
+import {registeringuser} from '../reducers/usersReducer'
 const RegistrationForm=(props)=>{
   const dispatch =useDispatch()
   const history = useHistory()
@@ -19,15 +19,7 @@ const RegistrationForm=(props)=>{
     event.target.Email.value=''
     event.target.Phonenumber.value=''
     event.target.Name.value=''
-    try{
-        const registered=await registerService.registeruser({username:username,name:name,phonenumber:phonenumber,email:email,password:password})
-        dispatch(setNotification({text:`Registered successfully`,type:"success"},5))
-    }
-    catch(exception){
-        dispatch(setNotification({text:`${exception.response.data.error}`,type:"danger"},5))
-    }
-  
-    
+    dispatch(registeringuser({username:username,name:name,phonenumber:phonenumber,email:email,password:password}))    
   }
     return(
       <div class="container" style={{maxWidth:"500px",marginTop:"60px"}}>

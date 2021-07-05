@@ -23,6 +23,7 @@ const ResetPasswordEmail=(props)=>{
     }
     catch(exception){
       dispatch(setNotification({text:`${exception.response.data}`,type:"danger"},5))
+      setSubmitted(false)
     }
   }
     return(

@@ -39,7 +39,7 @@ const ResetPasswordForm=(props)=>{
   }
     return(
       <div class="container" style={{maxWidth:"500px",marginTop:"60px"}}>
-      <h2>Register</h2>
+      <h2>Update your password</h2>
       <Form onSubmit={handleResetForm}>
         <Form.Group>
           <Form.Label>password:</Form.Label>

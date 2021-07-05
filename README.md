@@ -1,5 +1,5 @@
 # To-Do-Application
-to run backend at firts do npm install and then  
+to run backend at first do npm install and then  
 create a .env file and give values for following  
 MONGODB_URI=''  
 TEST_MONGODB_URI=''  

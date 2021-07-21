@@ -18,7 +18,7 @@ const ResetPasswordEmail=(props)=>{
     try{
        const response=await resetpasswordservice.resetpasswordmail({email:email})
        dispatch(setNotification({text:`${response}`,type:"success"},5))
-	   event.target.Email.value=''
+       event.target.Email.value=''
        setSent(true)
     }
     catch(exception){

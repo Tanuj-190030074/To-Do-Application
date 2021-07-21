@@ -25,6 +25,7 @@ todolistRouter.post('/',async(request,response)=>{
     const todoobj={
         content:body.content,
         important:false,
+        completed:false,
         user:user._id
     }
     const todo=new todolistmodel(todoobj)
@@ -61,6 +62,7 @@ todolistRouter.put('/:id',async(request,response)=>{
         const newobj={
             content:body.content,
             important:body.important,
+            completed:body.completed,
             user:user.id
         }
         const x=await todolistmodel.findByIdAndUpdate(request.params.id,newobj,{new:true})

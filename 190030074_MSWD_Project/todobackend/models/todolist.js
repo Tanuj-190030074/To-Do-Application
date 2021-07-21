@@ -5,6 +5,7 @@ const todolistSchema= new mongoose.Schema({
          required:true
      },
      important:Boolean,
+     completed:Boolean,
      user: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'users'

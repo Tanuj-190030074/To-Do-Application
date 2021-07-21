@@ -19,7 +19,7 @@ const TodoForm=(props)=>{
 
     return(
     <div style={{marginLeft:"20%"}} className="container">
-       <h2>Add your todo's here</h2>
+       
        <Form onSubmit={handleTodo}>
         <Form.Row>
              <Col lg={5}>
@@ -29,7 +29,7 @@ const TodoForm=(props)=>{
           />
           </Col>
           <Col lg={1}>
-          <Fab  aria-label="add" type="submit" size="medium" style={{marginTop:"20px",outline:0,backgroundColor:"#43a047",color:"white"}}>
+          <Fab  aria-label="add" type="submit" id="addbutton" size="medium" style={{marginTop:"20px",outline:0,backgroundColor:"#43a047",color:"white"}}>
            <AddIcon />
            </Fab>
           </Col>

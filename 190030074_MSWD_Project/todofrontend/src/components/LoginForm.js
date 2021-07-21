@@ -32,7 +32,7 @@ const LoginForm=(props)=>{
           />
           <Link  to="/reset_password_email">forgotpassword?</Link>
           <br/><br/>
-          <Button variant="primary" type="submit">
+          <Button variant="primary" id="loginbutton" type="submit">
             login
           </Button>
         </Form.Group>

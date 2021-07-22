@@ -46,6 +46,7 @@ const TodoForm=(props)=>{
         <option value="all">All</option>
         <option value="important">Important</option>
         <option value="notimportant">Not Important</option>
+        <option value="completed">Completed tasks</option>
       </Form.Control>
           </Col>
         </Form.Row>

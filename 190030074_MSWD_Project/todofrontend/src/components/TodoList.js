@@ -13,10 +13,14 @@ const TodoList=()=>{
       }
       else if(state.filter==="important")
       {
-        return state.todos.filter(x=>x.user.username==state.user.username&&x.important===true)
+        return state.todos.filter(x=>x.user.username==state.user.username&&x.important===true&&x.completed===false)
+      }
+      else if(state.filter==="completed")
+      {
+        return state.todos.filter(x=>x.user.username==state.user.username&&x.completed===true)
       }
       else{
-        return state.todos.filter(x=>x.user.username==state.user.username&&x.important===false)
+        return state.todos.filter(x=>x.user.username==state.user.username&&x.important===false&&x.completed===false)
       }
       })
     
